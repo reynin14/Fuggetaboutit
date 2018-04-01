@@ -1,9 +1,11 @@
 import { ADD_REMINDER, DELETE_REMINDER } from '../actions/reminders';
 
 const initialState = (action) => {
+  let { text, dueDate } = action;
   return {
-    text: action.text,
     id: Math.random(),
+    text,
+    dueDate,
   }
 }
 
