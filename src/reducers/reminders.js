@@ -1,7 +1,7 @@
 import { ADD_REMINDER, DELETE_REMINDER, CLEAR_REMINDERS } from '../actions/reminders';
 import { bake_cookie, read_cookie } from 'sfcookies';
 
-const initialState = (action) => {
+const addReminder = (action) => {
   let { text, dueDate } = action;
   return {
     id: Math.random(),
@@ -21,7 +21,7 @@ const reducer = (state = [], action) => {
 
   switch(action.type){
     case ADD_REMINDER:
-      reminders = [...state, initialState(action)]
+      reminders = [...state, addReminder(action)]
       bake_cookie('reminders', reminders);
       return reminders;
     case DELETE_REMINDER:

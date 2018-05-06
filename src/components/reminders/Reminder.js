@@ -24,10 +24,10 @@ const Reminder = (props) => {
 };
 
 Reminder.propTypes = {
-  id: PropTypes.float,
+  id: PropTypes.number,
   text: PropTypes.string,
   deleteReminder: PropTypes.func,
-  dueDate: PropTypes.obj,
+  dueDate: PropTypes.string,
 }
 
 
