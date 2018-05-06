@@ -11,7 +11,7 @@ const initialState = (action) => {
 }
 
 const removeById = (state = [], id) => {
-  const reminders = state.filter(reminder => reminder.id != id);
+  const reminders = state.filter(reminder => reminder.id !== id);
   return reminders
 }
 
